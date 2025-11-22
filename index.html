@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AttiekeAI - Cognitive Operations in Africa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --attieke-blue: #003366; /* Deep, authoritative Blue */
+            --attieke-accent: #00bcd4; /* Light Cyan/Teal for highlights */
+        }
+        body {
+            font-family: 'Inter', sans-serif;Headline: AttiekeAI: The Future of Cognitive Operations in Africa.
+Sub-Headline: Advanced AI solutions in Abidjan for OCR, RAG finetuning, Judicial Tech, and strategic R&D, powering organizational excellence across West Africa.
+Call-to-Action (CTA): Schedule a Consultation
+
+About Us
+
+AttiekeAI is an Abidjan-based technology firm committed to driving digital transformation and ensuring digital sovereignty through high-impact artificial intelligence. Our mission is to leverage the world's most advanced LLMs and Computer Vision techniques to solve the most complex operational challenges facing African judicial systems, corporations, and government bodies. We build trust by delivering precise, results-oriented, and ethically-governed AI solutions tailored for the specific needs of the region.
+
+Our team is composed of elite data scientists and engineers, deeply rooted in the Abidjan tech ecosystem. This local expertise allows us to navigate unique data complexities—from multi-lingual documentation to localized regulatory frameworks—ensuring that our global-standard AI platforms are contextually aware and seamlessly integrated into the West African business landscape. We are your partner for innovation right here in Côte d'Ivoire.
+
+Our Services
+
+Service 1: Judicial & Legal Tech
+
+We deploy AI systems that accelerate due process, analyze vast volumes of case files, and provide sophisticated predictive analysis to support judicial bodies. Our solutions enhance file organization and information retrieval, fundamentally increasing the speed, accuracy, and transparency of legal decision-making.
+
+Service 2: Optical Character Recognition (OCR) Excellence
+
+Transform your physical archives into searchable, actionable digital data. Our specialized OCR engines are trained to handle diverse document types, including handwritten notes, historical records, and complex regional documentation, achieving industry-leading accuracy in challenging environments.
+
+Service 3: RAG Finetuning (Contextual AI)
+
+Stop trusting generalist chatbots. Our Retrieval-Augmented Generation (RAG) service creates hyper-accurate, private-data-aware internal LLMs for your company. By grounding models in your proprietary knowledge bases, we eliminate hallucination and deliver highly relevant, consistent AI that speaks your business's precise language.
+
+Service 4: AI Research & Development (R&D)
+
+Access a dedicated Abidjan-based R&D lab for competitive advantage. We focus on customized model training and novel solution development, tackling unique and complex business challenges that require proprietary, cutting-edge AI methodologies to solve.
+
+Case Studies (Demonstrating Proven Impact)
+
+Judicial Efficiency Uplift: Reducing case file processing time by 60% for a major West African court system using Computer Vision and legal document analysis.
+
+Financial Document Automation: Achieving 99.8% data extraction accuracy from semi-structured bank statements using custom-trained OCR for a leading regional bank.
+
+Enterprise Knowledge Hub: Implementing RAG for a large manufacturing client, enabling instant, accurate access to over 10,000 internal maintenance manuals and safety protocols.
+
+Contact AttiekeAI
+
+Ready to transform your operations with contextual AI? Contact us to begin your journey.
+
+Physical Address:
+AttiekeAI Headquarters
+Plateau, Abidjan, Côte d'Ivoire
+
+Contact Form Request: (Name, Email, Company, Project Type - Dropdown: Judicial Tech, OCR, RAG, R&D/Custom)
+            color: #333;
+        }
+        .bg-attieke-blue { background-color: var(--attieke-blue); }
+        .text-attieke-blue { color: var(--attieke-blue); }
+        .bg-attieke-accent { background-color: var(--attieke-accent); }
+        .text-attieke-accent { color: var(--attieke-accent); }
+        .border-attieke-accent { border-color: var(--attieke-accent); }
+        .shadow-attieke { box-shadow: 0 10px 15px -3px rgba(0, 51, 102, 0.2), 0 4px 6px -2px rgba(0, 51, 102, 0.1); }
+        .rounded-xl { border-radius: 0.75rem; }
+
+        /* Animation for the AI/Tech Background */
+        @keyframes pulse-dot {
+            0% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.1); }
+            100% { opacity: 0.3; transform: scale(1); }
+        }
+        .animated-dot {
+            animation: pulse-dot 4s ease-in-out infinite;
+        }
+
+        /* Document Demo Styles */
+        .ocr-word {
+            background-color: rgba(255, 255, 0, 0.2);
+            padding: 1px 2px;
+            margin: 0 -2px;
+            border-radius: 2px;
+            cursor: help;
+        }
+        .rag-fact {
+            background-color: rgba(0, 188, 212, 0.15); /* Light blue accent background */
+            color: var(--attieke-blue);
+            font-weight: 600;
+            padding: 2px 4px;
+            margin: 0 -4px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Language Switcher -->
+    <div class="fixed top-4 right-4 z-50">
+        <button onclick="setLanguage('en')" class="lang-switcher p-2 text-sm font-semibold rounded-l-lg transition duration-200" data-lang="en">EN</button>
+        <button onclick="setLanguage('fr')" class="lang-switcher p-2 text-sm font-semibold rounded-r-lg transition duration-200" data-lang="fr">FR</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-40 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 text-2xl font-extrabold text-attieke-blue">AttiekeAI</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#hero" class="text-gray-600 hover:text-attieke-blue font-medium transition duration-150" data-translate="nav-home">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-attieke-blue font-medium transition duration-150" data-translate="nav-about">About Us</a>
+                    <a href="#services" class="text-gray-600 hover:text-attieke-blue font-medium transition duration-150" data-translate="nav-services">Services</a>
+                    <a href="#cases" class="text-gray-600 hover:text-attieke-blue font-medium transition duration-150" data-translate="nav-cases">Case Studies</a>
+                    <a href="#contact" class="text-gray-600 hover:text-attieke-blue font-medium transition duration-150" data-translate="nav-contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative bg-attieke-blue text-white py-24 sm:py-32 overflow-hidden rounded-b-3xl">
+        <!-- Abstract Moving Background (Beats the 'moving image' request) -->
+        <svg class="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 1000 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle class="animated-dot" cx="150" cy="150" r="10" fill="white" style="animation-delay: 0s;"/>
+            <circle class="animated-dot" cx="400" cy="500" r="12" fill="white" style="animation-delay: 1s;"/>
+            <circle class="animated-dot" cx="800" cy="200" r="8" fill="white" style="animation-delay: 2s;"/>
+            <circle class="animated-dot" cx="50" cy="450" r="15" fill="white" style="animation-delay: 3s;"/>
+            <path d="M150 150 L400 500 L800 200 Z" stroke="white" stroke-opacity="0.2" stroke-width="2"/>
+            <path d="M50 450 L400 500" stroke="white" stroke-opacity="0.2" stroke-width="1"/>
+        </svg>
+
+        <div class="max-w-7xl mx-auto relative px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-attieke-accent text-lg font-semibold mb-3 tracking-wider" data-translate="hero-tag">Pioneering AI in Abidjan</p>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-tight mb-6" data-translate="hero-headline">
+                AttiekeAI: The Future of Cognitive Operations in Africa.
+            </h1>
+            <p class="text-xl sm:text-2xl mb-10 max-w-3xl mx-auto opacity-90" data-translate="hero-subheadline">
+                Advanced AI solutions in Abidjan for OCR, RAG finetuning, Judicial Tech, and strategic R&D, powering organizational excellence across West Africa.
+            </p>
+            <a href="#contact" class="inline-block bg-attieke-accent text-attieke-blue py-3 px-8 rounded-full font-bold text-lg hover:bg-white hover:text-attieke-blue transition duration-300 shadow-xl" data-translate="hero-cta">
+                Schedule a Consultation
+            </a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-attieke-blue text-center mb-12" data-translate="about-heading">Why AttiekeAI?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-attieke-accent mb-3" data-translate="about-mission-title">Our Mission and Ethics</h3>
+                    <p class="text-gray-700" data-translate="about-mission">
+                        AttiekeAI is an Abidjan-based technology firm committed to driving digital transformation and ensuring digital sovereignty through high-impact artificial intelligence. Our mission is to leverage the world's most advanced LLMs and Computer Vision techniques to solve the most complex operational challenges facing African judicial systems, corporations, and government bodies. We build trust by delivering precise, results-oriented, and ethically-governed AI solutions tailored for the specific needs of the region.
+                    </p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-attieke-accent mb-3" data-translate="about-local-title">Local Expertise, Global Standards</h3>
+                    <p class="text-gray-700" data-translate="about-local">
+                        Our team is composed of elite data scientists and engineers, deeply rooted in the Abidjan tech ecosystem. This local expertise allows us to navigate unique data complexities—from multi-lingual documentation to localized regulatory frameworks—ensuring that our global-standard AI platforms are contextually aware and seamlessly integrated into the West African business landscape. We are your partner for innovation right here in Côte d'Ivoire.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 sm:py-24 bg-attieke-blue/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-attieke-blue text-center mb-12" data-translate="services-heading">Our Core AI Solutions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Service 1: Judicial & Legal Tech -->
+                <div class="bg-white p-6 rounded-xl shadow-attieke transition duration-300 hover:scale-[1.02]">
+                    <h3 class="text-2xl font-bold text-attieke-accent mb-3" data-translate="service-1-title">Judicial & Legal Tech</h3>
+                    <p class="text-gray-700 mb-4" data-translate="service-1-desc">
+                        We deploy AI systems that accelerate due process, analyze vast volumes of case files, and provide sophisticated predictive analysis to support judicial bodies. Our solutions enhance file organization and information retrieval, fundamentally increasing the speed, accuracy, and transparency of legal decision-making.
+                    </p>
+                </div>
+
+                <!-- Service 2: OCR Excellence -->
+                <div class="bg-white p-6 rounded-xl shadow-attieke transition duration-300 hover:scale-[1.02]">
+                    <h3 class="text-2xl font-bold text-attieke-accent mb-3" data-translate="service-2-title">Optical Character Recognition (OCR) Excellence</h3>
+                    <p class="text-gray-700 mb-4" data-translate="service-2-desc">
+                        Transform your physical archives into searchable, actionable digital data. Our specialized OCR engines are trained to handle diverse document types, including handwritten notes, historical records, and complex regional documentation, achieving industry-leading accuracy in challenging environments.
+                    </p>
+                </div>
+
+                <!-- Service 3: RAG Finetuning -->
+                <div class="bg-white p-6 rounded-xl shadow-attieke transition duration-300 hover:scale-[1.02]">
+                    <h3 class="text-2xl font-bold text-attieke-accent mb-3" data-translate="service-3-title">RAG Finetuning (Contextual AI)</h3>
+                    <p class="text-gray-700 mb-4" data-translate="service-3-desc">
+                        Stop trusting generalist chatbots. Our Retrieval-Augmented Generation (RAG) service creates hyper-accurate, private-data-aware internal LLMs for your company. By grounding models in your proprietary knowledge bases, we eliminate hallucination and deliver highly relevant, consistent AI that speaks your business's precise language.
+                    </p>
+                </div>
+
+                <!-- Service 4: R&D -->
+                <div class="bg-white p-6 rounded-xl shadow-attieke transition duration-300 hover:scale-[1.02]">
+                    <h3 class="text-2xl font-bold text-attieke-accent mb-3" data-translate="service-4-title">AI Research & Development (R&D)</h3>
+                    <p class="text-gray-700 mb-4" data-translate="service-4-desc">
+                        Access a dedicated Abidjan-based R&D lab for competitive advantage. We focus on customized model training and novel solution development, tackling unique and complex business challenges that require proprietary, cutting-edge AI methodologies to solve.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Document AI Demo Section (Integrated from document_ai_demo.html) -->
+    <section id="demo" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-attieke-blue text-center mb-12" data-translate="demo-heading">See AI in Action: Document Intelligence Demo</h2>
+            <div class="max-w-4xl mx-auto bg-white p-6 sm:p-8 rounded-xl shadow-2xl shadow-attieke transition duration-300 border border-attieke-accent/50">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+                    <!-- Input Panel -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-700 flex items-center" data-translate="demo-input-title">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-attieke-accent" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 4a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd" />
+                            </svg>
+                            Upload/Paste Document
+                        </h3>
+                        <textarea id="documentInput" rows="12" class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-attieke-accent transition duration-150" placeholder="Paste your document text here. Example:
+
+Contract Date: 2025-09-15
+Client Name: GNA Capital Holdings
+Project: Phase II Digitalization
+Total Value: 450,000,000 XOF
+Key Deliverable: Deployment of the RAG Knowledge System by November 30, 2025.
+Lead Engineer: Mr. Jean-Luc Koffi.
+"
+                        ></textarea>
+                        
+                        <button id="processButton" class="w-full mt-4 bg-attieke-blue text-white py-3 rounded-lg font-bold hover:bg-opacity-90 transition duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-attieke-accent" data-translate="demo-process-btn">
+                            PROCESS DOCUMENT WITH AI
+                        </button>
+                        <div id="loadingIndicator" class="mt-2 text-center text-attieke-blue font-medium hidden">
+                            <div class="animate-spin inline-block w-5 h-5 border-2 border-white border-t-attieke-blue rounded-full mr-2"></div>
+                            <span data-translate="demo-loading">AI Analyzing Content...</span>
+                        </div>
+                    </div>
+
+                    <!-- Output Panel -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-700 flex items-center" data-translate="demo-output-title">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-attieke-accent" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM4 11a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM4 15a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1z" />
+                            </svg>
+                            AI Processing Results
+                        </h3>
+                        
+                        <div class="mb-4 p-4 border rounded-lg bg-gray-50 min-h-32">
+                            <p class="text-sm font-medium text-gray-600 mb-2 border-b pb-1" data-translate="demo-ocr-title">1. OCR Simulation (Text Reconstruction)</p>
+                            <p id="ocrOutput" class="text-gray-800 leading-relaxed text-sm"></p>
+                        </div>
+
+                        <div class="p-4 border border-attieke-accent rounded-lg bg-attieke-blue/5 min-h-32">
+                            <p class="text-sm font-medium text-attieke-blue mb-2 border-b border-attieke-accent/50 pb-1" data-translate="demo-rag-title">2. RAG/Entity Extraction</p>
+                            <div id="ragOutput" class="text-gray-800 text-sm grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <p class="text-gray-500 italic text-xs col-span-2" data-translate="demo-rag-placeholder">Critical facts extracted by the RAG model will appear here.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Footer for Explanation -->
+                <div class="mt-8 pt-6 border-t border-gray-200">
+                    <h3 class="text-lg font-semibold text-attieke-blue mb-2" data-translate="demo-how-title">How This Demo Works</h3>
+                    <p class="text-gray-600 text-sm" data-translate="demo-how-desc">This is a simulated demonstration. **OCR (Optical Character Recognition)** transforms image/paper text into editable words (here, represented by the reconstructed text). **RAG (Retrieval-Augmented Generation)** is the powerful step where the AI understands the context to retrieve and structure specific facts, such as key dates, values, and personnel, ready for database entry or automated follow-up.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section id="cases" class="py-16 sm:py-24 bg-attieke-blue text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-attieke-accent text-center mb-12" data-translate="cases-heading">Case Studies (Demonstrating Proven Impact)</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Case Study 1 -->
+                <div class="bg-white text-gray-800 p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-attieke-blue mb-2" data-translate="case-1-title">Judicial Efficiency Uplift</h3>
+                    <p data-translate="case-1-desc">Reducing case file processing time by 60% for a major West African court system using Computer Vision and legal document analysis.</p>
+                </div>
+                
+                <!-- Case Study 2 -->
+                <div class="bg-white text-gray-800 p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-attieke-blue mb-2" data-translate="case-2-title">Financial Document Automation</h3>
+                    <p data-translate="case-2-desc">Achieving 99.8% data extraction accuracy from semi-structured bank statements using custom-trained OCR for a leading regional bank.</p>
+                </div>
+
+                <!-- Case Study 3 -->
+                <div class="bg-white text-gray-800 p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-attieke-blue mb-2" data-translate="case-3-title">Enterprise Knowledge Hub</h3>
+                    <p data-translate="case-3-desc">Implementing RAG for a large manufacturing client, enabling instant, accurate access to over 10,000 internal maintenance manuals and safety protocols.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-attieke-blue text-center mb-12" data-translate="contact-heading">Contact AttiekeAI</h2>
+            <div class="max-w-xl mx-auto bg-attieke-blue/5 p-8 rounded-xl shadow-lg border-t-4 border-attieke-accent">
+                <p class="text-lg text-gray-700 mb-6 text-center" data-translate="contact-cta-text">Ready to transform your operations with contextual AI? Contact us to begin your journey.</p>
+                
+                <form onsubmit="event.preventDefault(); showThankYou();" class="space-y-4">
+                    <input type="text" placeholder="Name" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-attieke-accent" required>
+                    <input type="email" placeholder="Email" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-attieke-accent" required>
+                    <input type="text" placeholder="Company" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-attieke-accent">
+                    <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-attieke-accent" required>
+                        <option value="" disabled selected data-translate="contact-select-placeholder">Select Project Type</option>
+                        <option value="judicial" data-translate="contact-select-judicial">Judicial Tech</option>
+                        <option value="ocr" data-translate="contact-select-ocr">OCR Excellence</option>
+                        <option value="rag" data-translate="contact-select-rag">RAG Finetuning</option>
+                        <option value="rnd" data-translate="contact-select-rnd">R&D/Custom Project</option>
+                    </select>
+                    <button type="submit" class="w-full bg-attieke-blue text-white py-3 rounded-lg font-bold hover:bg-opacity-90 transition duration-300 focus:outline-none focus:ring-4 focus:ring-attieke-accent" data-translate="contact-submit">
+                        Submit Request
+                    </button>
+                </form>
+
+                <div class="mt-8 text-center">
+                    <h4 class="font-semibold text-attieke-blue mb-2" data-translate="contact-address-title">Physical Address:</h4>
+                    <p class="text-gray-600" data-translate="contact-address-line">AttiekeAI Headquarters</p>
+                    <p class="text-gray-600" data-translate="contact-address-line-2">Plateau, Abidjan, Côte d'Ivoire</p>
+                </div>
+
+                <!-- Thank You Modal (Hidden by Default) -->
+                <div id="thankYouMessage" class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 transition-opacity duration-300">
+                    <div class="bg-white p-8 rounded-xl shadow-2xl max-w-sm w-full text-center border-t-4 border-attieke-accent">
+                        <h4 class="text-2xl font-bold text-attieke-blue mb-3" data-translate="modal-thank-you-title">Thank You!</h4>
+                        <p class="text-gray-700 mb-5" data-translate="modal-thank-you-message">Your request has been successfully submitted. An AttiekeAI specialist will be in touch shortly.</p>
+                        <button onclick="hideThankYou()" class="bg-attieke-accent text-attieke-blue py-2 px-6 rounded-full font-semibold hover:bg-opacity-80 transition duration-200" data-translate="modal-close-btn">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-attieke-blue py-6 text-center">
+        <p class="text-white text-sm opacity-75">&copy; 2025 AttiekeAI. All rights reserved. Built with pride in Abidjan, Côte d'Ivoire.</p>
+    </footer>
+
+    <script>
+        // --- 1. LANGUAGE TRANSLATION LOGIC ---
+        const translations = {
+            'en': {
+                'nav-home': 'Home', 'nav-about': 'About Us', 'nav-services': 'Services', 'nav-cases': 'Case Studies', 'nav-contact': 'Contact',
+                'hero-tag': 'Pioneering AI in Abidjan',
+                'hero-headline': 'AttiekeAI: The Future of Cognitive Operations in Africa.',
+                'hero-subheadline': 'Advanced AI solutions in Abidjan for OCR, RAG finetuning, Judicial Tech, and strategic R&D, powering organizational excellence across West Africa.',
+                'hero-cta': 'Schedule a Consultation',
+                'about-heading': 'Why AttiekeAI?',
+                'about-mission-title': 'Our Mission and Ethics',
+                'about-mission': 'AttiekeAI is an Abidjan-based technology firm committed to driving digital transformation and ensuring digital sovereignty through high-impact artificial intelligence. Our mission is to leverage the world\'s most advanced LLMs and Computer Vision techniques to solve the most complex operational challenges facing African judicial systems, corporations, and government bodies. We build trust by delivering precise, results-oriented, and ethically-governed AI solutions tailored for the specific needs of the region.',
+                'about-local-title': 'Local Expertise, Global Standards',
+                'about-local': 'Our team is composed of elite data scientists and engineers, deeply rooted in the Abidjan tech ecosystem. This local expertise allows us to navigate unique data complexities—from multi-lingual documentation to localized regulatory frameworks—ensuring that our global-standard AI platforms are contextually aware and seamlessly integrated into the West African business landscape. We are your partner for innovation right here in Côte d\'Ivoire.',
+                'services-heading': 'Our Core AI Solutions',
+                'service-1-title': 'Judicial & Legal Tech',
+                'service-1-desc': 'We deploy AI systems that accelerate due process, analyze vast volumes of case files, and provide sophisticated predictive analysis to support judicial bodies. Our solutions enhance file organization and information retrieval, fundamentally increasing the speed, accuracy, and transparency of legal decision-making.',
+                'service-2-title': 'Optical Character Recognition (OCR) Excellence',
+                'service-2-desc': 'Transform your physical archives into searchable, actionable digital data. Our specialized OCR engines are trained to handle diverse document types, including handwritten notes, historical records, and complex regional documentation, achieving industry-leading accuracy in challenging environments.',
+                'service-3-title': 'RAG Finetuning (Contextual AI)',
+                'service-3-desc': 'Stop trusting generalist chatbots. Our Retrieval-Augmented Generation (RAG) service creates hyper-accurate, private-data-aware internal LLMs for your company. By grounding models in your proprietary knowledge bases, we eliminate hallucination and deliver highly relevant, consistent AI that speaks your business\'s precise language.',
+                'service-4-title': 'AI Research & Development (R&D)',
+                'service-4-desc': 'Access a dedicated Abidjan-based R&D lab for competitive advantage. We focus on customized model training and novel solution development, tackling unique and complex business challenges that require proprietary, cutting-edge AI methodologies to solve.',
+                'demo-heading': 'See AI in Action: Document Intelligence Demo',
+                'demo-input-title': 'Upload/Paste Document',
+                'demo-process-btn': 'PROCESS DOCUMENT WITH AI',
+                'demo-loading': 'AI Analyzing Content...',
+                'demo-output-title': 'AI Processing Results',
+                'demo-ocr-title': '1. OCR Simulation (Text Reconstruction)',
+                'demo-rag-title': '2. RAG/Entity Extraction',
+                'demo-rag-placeholder': 'Critical facts extracted by the RAG model will appear here.',
+                'demo-how-title': 'How This Demo Works',
+                'demo-how-desc': 'This is a simulated demonstration. **OCR (Optical Character Recognition)** transforms image/paper text into editable words (here, represented by the reconstructed text). **RAG (Retrieval-Augmented Generation)** is the powerful step where the AI understands the context to retrieve and structure specific facts, such as key dates, values, and personnel, ready for database entry or automated follow-up.',
+                'cases-heading': 'Case Studies (Demonstrating Proven Impact)',
+                'case-1-title': 'Judicial Efficiency Uplift',
+                'case-1-desc': 'Reducing case file processing time by 60% for a major West African court system using Computer Vision and legal document analysis.',
+                'case-2-title': 'Financial Document Automation',
+                'case-2-desc': 'Achieving 99.8% data extraction accuracy from semi-structured bank statements using custom-trained OCR for a leading regional bank.',
+                'case-3-title': 'Enterprise Knowledge Hub',
+                'case-3-desc': 'Implementing RAG for a large manufacturing client, enabling instant, accurate access to over 10,000 internal maintenance manuals and safety protocols.',
+                'contact-heading': 'Contact AttiekeAI',
+                'contact-cta-text': 'Ready to transform your operations with contextual AI? Contact us to begin your journey.',
+                'contact-select-placeholder': 'Select Project Type',
+                'contact-select-judicial': 'Judicial Tech',
+                'contact-select-ocr': 'OCR Excellence',
+                'contact-select-rag': 'RAG Finetuning',
+                'contact-select-rnd': 'R&D/Custom Project',
+                'contact-submit': 'Submit Request',
+                'contact-address-title': 'Physical Address:',
+                'contact-address-line': 'AttiekeAI Headquarters',
+                'contact-address-line-2': 'Plateau, Abidjan, Côte d\'Ivoire',
+                'modal-thank-you-title': 'Thank You!',
+                'modal-thank-you-message': 'Your request has been successfully submitted. An AttiekeAI specialist will be in touch shortly.',
+                'modal-close-btn': 'Close'
+            },
+            'fr': {
+                'nav-home': 'Accueil', 'nav-about': 'À Propos', 'nav-services': 'Services', 'nav-cases': 'Études de Cas', 'nav-contact': 'Contact',
+                'hero-tag': 'Pionnier de l\'IA à Abidjan',
+                'hero-headline': 'AttiekeAI : L\'Avenir des Opérations Cognitives en Afrique.',
+                'hero-subheadline': 'Solutions d\'IA avancées à Abidjan pour l\'OCR, le RAG finetuning, la technologie judiciaire et la R&D stratégique, stimulant l\'excellence organisationnelle en Afrique de l\'Ouest.',
+                'hero-cta': 'Planifier une Consultation',
+                'about-heading': 'Pourquoi AttiekeAI ?',
+                'about-mission-title': 'Notre Mission et Éthique',
+                'about-mission': 'AttiekeAI est une entreprise technologique basée à Abidjan, engagée à mener la transformation numérique et à assurer la souveraineté numérique grâce à une intelligence artificielle à fort impact. Notre mission est d\'exploiter les LLM et les techniques de vision par ordinateur les plus avancées au monde pour résoudre les défis opérationnels les plus complexes auxquels sont confrontés les systèmes judiciaires, les entreprises et les organismes gouvernementaux africains. Nous bâtissons la confiance en fournissant des solutions d\'IA précises, axées sur les résultats et régies par l\'éthique, adaptées aux besoins spécifiques de la région.',
+                'about-local-title': 'Expertise Locale, Standards Mondiaux',
+                'about-local': 'Notre équipe est composée d\'ingénieurs et de scientifiques des données d\'élite, profondément enracinés dans l\'écosystème technologique d\'Abidjan. Cette expertise locale nous permet de gérer des complexités de données uniques—des documents multilingues aux cadres réglementaires localisés—garantissant que nos plateformes d\'IA de niveau mondial sont adaptées au contexte et intégrées de manière transparente dans le paysage commercial ouest-africain. Nous sommes votre partenaire pour l\'innovation ici même en Côte d\'Ivoire.',
+                'services-heading': 'Nos Solutions d\'IA Clés',
+                'service-1-title': 'Technologies Judiciaires et Légales',
+                'service-1-desc': 'Nous déployons des systèmes d\'IA qui accélèrent le processus judiciaire, analysent de vastes volumes de dossiers et fournissent une analyse prédictive sophistiquée pour soutenir les organes judiciaires. Nos solutions améliorent l\'organisation des dossiers et la récupération d\'informations, augmentant fondamentalement la vitesse, la précision et la transparence des prises de décision juridiques.',
+                'service-2-title': 'Excellence en Reconnaissance Optique de Caractères (OCR)',
+                'service-2-desc': 'Transformez vos archives physiques en données numériques consultables et exploitables. Nos moteurs OCR spécialisés sont entraînés à traiter divers types de documents, y compris les notes manuscrites, les archives historiques et la documentation régionale complexe, atteignant une précision de pointe dans des environnements difficiles.',
+                'service-3-title': 'RAG Finetuning (IA Contextuelle)',
+                'service-3-desc': 'Cessez de faire confiance aux chatbots généralistes. Notre service RAG (Génération Augmentée par Récupération) crée des LLM internes hyper-précis et conscients des données privées pour votre entreprise. En ancrant les modèles dans vos bases de connaissances propriétaires, nous éliminons l\'hallucination et fournissons une IA hautement pertinente et cohérente qui parle le langage précis de votre entreprise.',
+                'service-4-title': 'Recherche et Développement en IA (R&D)',
+                'service-4-desc': 'Accédez à un laboratoire R&D dédié basé à Abidjan pour un avantage compétitif. Nous nous concentrons sur la formation de modèles personnalisés et le développement de solutions novatrices, abordant des défis commerciaux complexes et uniques qui nécessitent des méthodologies d\'IA propriétaires et de pointe pour être résolus.',
+                'demo-heading': 'Voir l\'IA en Action : Démo d\'Intelligence Documentaire',
+                'demo-input-title': 'Télécharger/Coller le Document',
+                'demo-process-btn': 'TRAITER LE DOCUMENT AVEC L\'IA',
+                'demo-loading': 'Analyse du contenu par l\'IA...',
+                'demo-output-title': 'Résultats du Traitement par l\'IA',
+                'demo-ocr-title': '1. Simulation OCR (Reconstruction de Texte)',
+                'demo-rag-title': '2. RAG/Extraction d\'Entités',
+                'demo-rag-placeholder': 'Les faits critiques extraits par le modèle RAG apparaîtront ici.',
+                'demo-how-title': 'Comment Fonctionne Cette Démo',
+                'demo-how-desc': 'Ceci est une démonstration simulée. **L\'OCR (Reconnaissance Optique de Caractères)** transforme le texte d\'image/papier en mots éditables (ici, représentés par le texte reconstruit). **Le RAG (Génération Augmentée par Récupération)** est l\'étape puissante où l\'IA comprend le contexte pour récupérer et structurer des faits spécifiques, tels que les dates clés, les valeurs et le personnel, prêts pour la saisie dans une base de données ou un suivi automatisé.',
+                'cases-heading': 'Études de Cas (Démontrant un Impact Prouvé)',
+                'case-1-title': 'Amélioration de l\'Efficacité Judiciaire',
+                'case-1-desc': 'Réduction du temps de traitement des dossiers de 60% pour un système judiciaire majeur d\'Afrique de l\'Ouest grâce à la vision par ordinateur et à l\'analyse de documents juridiques.',
+                'case-2-title': 'Automatisation des Documents Financiers',
+                'case-2-desc': 'Atteinte d\'une précision d\'extraction de données de 99,8% à partir de relevés bancaires semi-structurés à l\'aide d\'un OCR personnalisé pour une banque régionale de premier plan.',
+                'case-3-title': 'Hub de Connaissances d\'Entreprise',
+                'case-3-desc': 'Mise en œuvre du RAG pour un grand client manufacturier, permettant un accès instantané et précis à plus de 10 000 manuels de maintenance interne et protocoles de sécurité.',
+                'contact-heading': 'Contacter AttiekeAI',
+                'contact-cta-text': 'Prêt à transformer vos opérations avec l\'IA contextuelle ? Contactez-nous pour commencer votre parcours.',
+                'contact-select-placeholder': 'Sélectionner le Type de Projet',
+                'contact-select-judicial': 'Technologie Judiciaire',
+                'contact-select-ocr': 'Excellence OCR',
+                'contact-select-rag': 'RAG Finetuning',
+                'contact-select-rnd': 'R&D/Projet Personnalisé',
+                'contact-submit': 'Soumettre la Demande',
+                'contact-address-title': 'Adresse Physique :',
+                'contact-address-line': 'Siège Social AttiekeAI',
+                'contact-address-line-2': 'Plateau, Abidjan, Côte d\'Ivoire',
+                'modal-thank-you-title': 'Merci !',
+                'modal-thank-you-message': 'Votre demande a été soumise avec succès. Un spécialiste AttiekeAI vous contactera sous peu.',
+                'modal-close-btn': 'Fermer'
+            }
+        };
+
+        let currentLang = 'en';
+
+        function updateContent() {
+            const elements = document.querySelectorAll('[data-translate]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-translate');
+                if (translations[currentLang] && translations[currentLang][key]) {
+                    if (el.tagName === 'OPTION') {
+                        el.textContent = translations[currentLang][key];
+                    } else if (el.tagName === 'INPUT' && el.type === 'submit') {
+                        el.value = translations[currentLang][key];
+                    } else if (el.tagName === 'BUTTON') {
+                        el.textContent = translations[currentLang][key];
+                    } else if (el.placeholder) {
+                        el.placeholder = translations[currentLang][key];
+                    } else {
+                        el.innerHTML = translations[currentLang][key];
+                    }
+                }
+            });
+
+            // Update button styles
+            document.querySelectorAll('.lang-switcher').forEach(btn => {
+                if (btn.getAttribute('data-lang') === currentLang) {
+                    btn.classList.add('bg-attieke-accent', 'text-attieke-blue');
+                    btn.classList.remove('bg-gray-200', 'text-gray-600');
+                } else {
+                    btn.classList.remove('bg-attieke-accent', 'text-attieke-blue');
+                    btn.classList.add('bg-gray-200', 'text-gray-600');
+                }
+            });
+
+             // Update placeholder for the Contact Form's Select element manually
+            const selectPlaceholder = document.querySelector('select option[disabled][selected]');
+            if (selectPlaceholder) {
+                 selectPlaceholder.textContent = translations[currentLang]['contact-select-placeholder'];
+            }
+        }
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            updateContent();
+            // Re-run the demo simulation to update dynamic text within the demo
+            simulateProcessing(true); 
+        }
+
+        // Initialize with default language
+        window.onload = () => {
+            setLanguage(currentLang);
+        };
+        
+        // --- 2. DOCUMENT AI DEMO LOGIC ---
+        
+        const documentInput = document.getElementById('documentInput');
+        const processButton = document.getElementById('processButton');
+        const ocrOutput = document.getElementById('ocrOutput');
+        const ragOutput = document.getElementById('ragOutput');
+        const loadingIndicator = document.getElementById('loadingIndicator');
+
+        const defaultText = `Contract Date: 2025-09-15
+Client Name: GNA Capital Holdings
+Project: Phase II Digitalization
+Total Value: 450,000,000 XOF
+Key Deliverable: Deployment of the RAG Knowledge System by November 30, 2025.
+Lead Engineer: Mr. Jean-Luc Koffi.
+Status: Signed.`;
+        documentInput.value = defaultText;
+
+
+        const simulateProcessing = (isSilent = false) => {
+            const text = documentInput.value.trim();
+            if (!text) {
+                ocrOutput.innerHTML = `<span class="text-red-500">${currentLang === 'en' ? 'Please paste some document text to begin.' : 'Veuillez coller du texte de document pour commencer.'}</span>`;
+                ragOutput.innerHTML = `<p class="text-gray-500 italic text-xs col-span-2">${translations[currentLang]['demo-rag-placeholder']}</p>`;
+                return;
+            }
+
+            if (!isSilent) {
+                processButton.disabled = true;
+                loadingIndicator.classList.remove('hidden');
+                ocrOutput.innerHTML = '';
+                ragOutput.innerHTML = '';
+            }
+
+            // Simulate network latency (2 seconds) unless silent update
+            setTimeout(() => {
+                // --- 1. OCR Simulation (Text Reconstruction) ---
+                // Simulate minor errors/highlights
+                const ocrProcessedText = text
+                    .replace(/2025-09-15/, '2025-09-1<span class="ocr-word" title="Potential OCR error on original document.">5</span>')
+                    .replace(/Holdings/, '<span class="ocr-word" title="Accurate OCR extraction.">Holdings</span>')
+                    .replace(/450,000,000/, '<span class="ocr-word" title="Accurate OCR extraction.">450,000,000</span>')
+                    .replace(/Deployment/, 'Deploymnt'); // Simulate a minor OCR error
+
+                ocrOutput.innerHTML = ocrProcessedText.replace(/\n/g, '<br>');
+
+
+                // --- 2. RAG / Entity Extraction Simulation ---
+                const extractedFacts = extractKeyFacts(text);
+                let ragHtml = '';
+
+                const factLabels = {
+                    'Contract Date': translations[currentLang]['contract-date'] || 'Contract Date',
+                    'Client Name': translations[currentLang]['client-name'] || 'Client Name',
+                    'Total Value': translations[currentLang]['total-value'] || 'Total Value',
+                    'Key Deliverable': translations[currentLang]['key-deliverable'] || 'Key Deliverable',
+                    'Lead Engineer': translations[currentLang]['lead-engineer'] || 'Lead Engineer',
+                };
+                
+                // Add French translations for RAG labels for consistency
+                if (currentLang === 'fr') {
+                    factLabels['Contract Date'] = 'Date du Contrat';
+                    factLabels['Client Name'] = 'Nom du Client';
+                    factLabels['Total Value'] = 'Valeur Totale';
+                    factLabels['Key Deliverable'] = 'Livraison Clé';
+                    factLabels['Lead Engineer'] = 'Ingénieur Principal';
+                }
+
+
+                if (extractedFacts.length > 0) {
+                    ragHtml = extractedFacts.map(fact => `
+                        <div class="p-2 border border-dashed border-attieke-accent rounded-md">
+                            <span class="text-attieke-blue font-bold">${factLabels[fact.label] || fact.label}:</span>
+                            <span class="rag-fact">${fact.value}</span>
+                        </div>
+                    `).join('');
+                } else {
+                    ragOutput.innerHTML = `<p class="text-gray-500 italic text-xs col-span-2">${translations[currentLang]['demo-rag-placeholder']}</p>`;
+                }
+
+                ragOutput.innerHTML = ragHtml;
+
+
+                if (!isSilent) {
+                    loadingIndicator.classList.add('hidden');
+                    processButton.disabled = false;
+                }
+
+            }, isSilent ? 50 : 2000); // Shorter delay for language switch updates
+        };
+
+        function extractKeyFacts(text) {
+            const facts = [];
+            
+            // Note: The regex must match the English label to extract the value correctly,
+            // but the display name will be translated later.
+            const patterns = [
+                { label: "Contract Date", regex: /Contract Date:\s*([^\n]+)/i },
+                { label: "Client Name", regex: /Client Name:\s*([^\n]+)/i },
+                { label: "Total Value", regex: /Total Value:\s*([^\n]+)/i },
+                { label: "Key Deliverable", regex: /Key Deliverable:\s*([^\n]+)/i },
+                { label: "Lead Engineer", regex: /Lead Engineer:\s*([^\n]+)/i },
+            ];
+
+            for (const pattern of patterns) {
+                const match = text.match(pattern.regex);
+                if (match && match[1]) {
+                    facts.push({ label: pattern.label, value: match[1].trim() });
+                }
+            }
+            return facts;
+        }
+
+        processButton.addEventListener('click', () => simulateProcessing(false));
+
+
+        // --- 3. CONTACT MODAL LOGIC ---
+        function showThankYou() {
+            document.getElementById('thankYouMessage').classList.remove('hidden');
+        }
+
+        function hideThankYou() {
+            document.getElementById('thankYouMessage').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
